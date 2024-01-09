@@ -1,0 +1,153 @@
+[
+    {
+      "id": 1,
+      "nom": "Ordinateur portable",
+      "description": "Un ordinateur portable de haute performance, idéal pour le travail et les jeux.",
+      "prix": 1500
+    },
+    {
+      "id": 2,
+      "nom": "Smartphone",
+      "description": "Un smartphone dernier cri avec un grand écran et une excellente autonomie de batterie.",
+      "prix": 800
+    },
+    {
+      "id": 3,
+      "nom": "Casque audio",
+      "description": "Casque audio sans fil avec réduction de bruit et son haute fidélité.",
+      "prix": 250
+    },
+    {
+      "id": 4,
+      "nom": "Montre intelligente",
+      "description": "Une montre intelligente avec suivi de la condition physique et notifications mobiles.",
+      "prix": 300
+    },
+    {
+      "id": 5,
+      "nom": "Tablette graphique",
+      "description": "Tablette graphique avec stylet sensible à la pression, parfaite pour les designers.",
+      "prix": 600
+    },
+    {
+      "id": 6,
+      "nom": "Console de jeux",
+      "description": "Console de salon de dernière génération pour une expérience de jeu immersive.",
+      "prix": 500
+    },
+    {
+      "id": 7,
+      "nom": "Appareil photo reflex",
+      "description": "Appareil photo reflex numérique avec objectifs interchangeables pour photographes professionnels.",
+      "prix": 1200
+    },
+    {
+      "id": 8,
+      "nom": "Drone avec caméra",
+      "description": "Drone équipé d'une caméra 4K pour prises de vue aériennes et vidéos de haute qualité.",
+      "prix": 1500
+    },
+    {
+      "id": 9,
+      "nom": "Enceinte Bluetooth",
+      "description": "Enceinte portable Bluetooth résistante à l'eau pour une écoute en extérieur.",
+      "prix": 120
+    },
+    {
+      "id": 10,
+      "nom": "Livre électronique",
+      "description": "Liseuse électronique légère avec écran e-ink et stockage pour milliers de livres.",
+      "prix": 130
+    },
+    {
+      "id": 11,
+      "nom": "Machine à café",
+      "description": "Machine à café automatique avec options de personnalisation pour chaque café.",
+      "prix": 450
+    },
+    {
+      "id": 12,
+      "nom": "Trottinette électrique",
+      "description": "Trottinette électrique pliable avec une longue portée et des performances rapides.",
+      "prix": 350
+    },
+    {
+      "id": 13,
+      "nom": "Écouteurs sans fil",
+      "description": "Écouteurs Bluetooth avec qualité sonore supérieure et boîtier de charge.",
+      "prix": 90
+    },
+    {
+      "id": 14,
+      "nom": "Chargeur sans fil",
+      "description": "Chargeur rapide sans fil pour smartphones compatibles.",
+      "prix": 20
+    },
+    {
+      "id": 15,
+      "nom": "Caméra de sécurité",
+      "description": "Caméra de sécurité Wi-Fi avec vision nocturne et notifications en temps réel.",
+      "prix": 200
+    },
+    {
+      "id": 16,
+      "nom": "Assistant vocal",
+      "description": "Assistant vocal intelligent avec contrôle des appareils domestiques et streaming musical.",
+      "prix": 150
+    },
+    {
+      "id": 17,
+      "nom": "Purificateur d'air",
+      "description": "Purificateur d'air avec filtration HEPA et surveillance de la qualité de l'air en temps réel.",
+      "prix": 180
+    },
+    {
+      "id": 18,
+      "nom": "Lampe de bureau LED",
+      "description": "Lampe de bureau LED avec variateur d'intensité et modes de couleur réglables.",
+      "prix": 70
+    },
+    {
+      "id": 19,
+      "nom": "Clavier sans fil",
+      "description": "Clavier sans fil ergonomique avec longue durée de vie des piles et récepteur USB.",
+      "prix": 50
+    },
+    {
+      "id": 20,
+      "nom": "Souris sans fil",
+      "description": "Souris sans fil compacte avec précision optique et connexion fiable.",
+      "prix": 25
+    },
+    {
+      "id": 21,
+      "nom": "Imprimante 3D",
+      "description": "Imprimante 3D de bureau pour la création de prototypes et de modèles détaillés.",
+      "prix": 700
+    },
+    {
+      "id": 22,
+      "nom": "Disque dur externe",
+      "description": "Disque dur externe avec grande capacité de stockage et transferts de données rapides.",
+      "prix": 100
+    },
+    {
+      "id": 23,
+      "nom": "Routeur Wi-Fi",
+      "description": "Routeur Wi-Fi puissant pour une couverture étendue et une connexion stable.",
+      "prix": 120
+    },
+    {
+      "id": 24,
+      "nom": "Sac à dos pour ordinateur portable",
+      "description": "Sac à dos résistant à l'eau avec compartiments dédiés pour ordinateur portable et tablette.",
+      "prix": 60
+    },
+    {
+      "id": 25,
+      "nom": "Station de charge",
+      "description": "Station de charge universelle avec plusieurs ports USB pour charger simultanément divers appareils.",
+      "prix": 35
+    }
+  ]
+  

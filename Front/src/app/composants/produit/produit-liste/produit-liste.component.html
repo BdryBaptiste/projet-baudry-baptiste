@@ -1,0 +1,27 @@
+<app-produit-store></app-produit-store>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Description</th>
+          <th scope="col">Prix</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produitsFiltres">
+          <th scope="row">{{ produit.id }}</th>
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.description }}</td>
+          <td>{{ produit.prix | currency:'EUR' }}</td>
+          <td><button (click)="addProduit(produit)">Ajouter</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
