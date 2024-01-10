@@ -23,16 +23,22 @@ exports.login = (req, res) => {
   if (pattern.test(utilisateur.login) && pattern.test(utilisateur.password)) {
      Utilisateur.findOne({ where: { login: utilisateur.login } })
     .then(data => {
+      console.log("Pre-data");
       if (data) {
         const user = {
           id: data.id,
           name: data.nom,
           email: data.email
         };
+
+        console.log("Post-data"); 
       
         let accessToken = generateAccessToken(user);
+        console.log("Data sending");
         res.setHeader('Authorization', `Bearer ${accessToken}`);
         res.send(data);
+
+
       } else {
         res.status(404).send({
           message: `Cannot find Utilisateur with login=${utilisateur.login}.`
