@@ -1,3 +1,11 @@
+<nav>
+  <a routerLink="/login">login</a>
+  <a routerLink="/catalog">catalog</a>
+  <a routerLink="/basket">basket</a>
+</nav>
+
+<router-outlet></router-outlet>
+
 <h1>Archi Web - Connexion backend</h1>
 <label for="login">login : </label><input [(ngModel)]="login" /><br />
 <label for="password">password : </label
@@ -8,14 +16,7 @@
 <hr />
 <div *ngIf="cnx">
   Bonjour {{ nom }} - {{ prenom }}
-
-  <h2>Catalogue produits</h2>
-
-  <div *ngIf="produits$ | async as produits">
-    <div *ngFor="let p of produits">
-      <div>{{ p.id }} - {{ p.nom }} - {{ p.prix }} €</div>
-    </div>
-  </div>
+ 
 </div>
 
 

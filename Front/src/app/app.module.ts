@@ -10,11 +10,14 @@ import { ProduitModule } from './composants/produit/produit.module';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './api.service';
 import { ApiHttpInterceptor } from './http-interceptor';
+import { LoginComponent } from './composants/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     RechercheProduitComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { ApiHttpInterceptor } from './http-interceptor';
     NgxsModule.forRoot([ProduitState]),
     ProduitModule,
     BrowserModule, FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiHttpInterceptor, multi: true },
