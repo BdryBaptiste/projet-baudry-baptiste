@@ -12,7 +12,6 @@ module.exports = (sequelize, Sequelize) => {
     },
     prenom: {
       type: Sequelize.STRING
-      // allowNull defaults to true
     },    
     adresse: {
         type: Sequelize.STRING,

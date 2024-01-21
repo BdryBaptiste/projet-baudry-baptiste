@@ -24,7 +24,7 @@ export class ApiService {
     );
   }
 
-  public getCalague(): Observable<Produit[]> {
+  public getCatalogue(): Observable<Produit[]> {
     return this.http.get<Produit[]>(environment.backendCatalogue);
   }
 }

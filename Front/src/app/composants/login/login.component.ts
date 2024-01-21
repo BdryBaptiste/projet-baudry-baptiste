@@ -13,9 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  @Select(ProduitState.getNbProduit) nb$!: Observable<number>;
-
-  name = 'Angular';
+   name = 'Angular';
 
   login: string = '';
   password: string = '';
@@ -23,10 +21,8 @@ export class LoginComponent {
   nom: string = '';
   prenom: string = '';
   cnx: boolean = false;
-  produits$: Observable<Array<Produit>>;
 
   constructor(private apiService: ApiService, private authService: AuthService, private router: Router) {
-    this.produits$ = this.apiService.getCalague();
   }
 
   connexion() {

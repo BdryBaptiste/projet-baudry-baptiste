@@ -5,6 +5,7 @@ import { Produit } from 'src/shared/models/produit';
 import { ProduitState } from 'src/shared/states/produit-state';
 import { Observable } from 'rxjs';
 import { AddProduit } from 'src/shared/actions/produit-actions';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-produit-liste',
@@ -13,27 +14,30 @@ import { AddProduit } from 'src/shared/actions/produit-actions';
 })
 
 export class ProduitListeComponent implements OnInit {
-  produits: any[] = [];
-  produitsFiltres: any[] = [];
-
-  constructor(private produitService: ProduitService, private store: Store) {}
+  produits$: Observable<Array<Produit>>;
+  produits: Produit[] = [];
+  produitsFiltres: Produit[] = [];
 
   @Select(ProduitState.getListeProduit) liste$!: Observable<Produit[]>;
 
+  constructor(private apiService: ApiService, private store: Store) {
+    this.produits$ = this.apiService.getCatalogue();
+  }
+
   ngOnInit(): void {
-    this.produitService.getProduits().subscribe((data: any[]) => {
+    this.produits$.subscribe((data: Produit[]) => {
       console.log(data);
       this.produits = data;
       this.produitsFiltres = data; 
     }, error => {
-      console.error("Erreur lors de la récupération des produits", error);
+      console.error("Error retrieving products", error);
     });
   }
-  addProduit(produit : Produit){
+
+  addProduit(produit: Produit): void {
     console.log(produit);
     const copyProduit: Produit = { ...produit };
     this.store.dispatch(new AddProduit(copyProduit));
-    
   }
 
   filtrerProduits(term: string): void {
