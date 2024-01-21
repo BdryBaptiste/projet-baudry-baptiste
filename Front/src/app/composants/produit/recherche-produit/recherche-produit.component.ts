@@ -5,6 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './recherche-produit.component.html',
   styleUrls: ['./recherche-produit.component.css']
 })
+
 export class RechercheProduitComponent {
   @Output() recherche = new EventEmitter<string>();
 

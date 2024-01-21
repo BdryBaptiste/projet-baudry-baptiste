@@ -1,30 +1,20 @@
-<nav>
-  <a routerLink="/login">login</a>
-  <a routerLink="/catalog">catalog</a>
-  <a routerLink="/basket">basket</a>
-</nav>
+<div class="wrapper">
+  <header class="header">
+      <nav class="navbar">
+          <div class="logo">TheGreatShopOfAllThingsYouMightNeed</div>
+          <ul class="nav-links">
+            <li><a routerLink="/home" routerLinkActive="active-link" class="nav-link">Home</a></li>
+              <li><a routerLink="/login" routerLinkActive="active-link" class="nav-link">Login</a></li>
+              <li><a routerLink="/catalog" routerLinkActive="active-link" class="nav-link">Catalog</a></li>
+              <li><a routerLink="/basket" routerLinkActive="active-link" class="nav-link">Basket</a></li>
+          </ul>
+      </nav>
+  </header>
 
-<router-outlet></router-outlet>
+  <main class="main-content">
+      <router-outlet></router-outlet>
+  </main>
 
-<h1>Archi Web - Connexion backend</h1>
-<label for="login">login : </label><input [(ngModel)]="login" /><br />
-<label for="password">password : </label
-><input [(ngModel)]="password" type="password" /><br />
-<br />
-<button (click)="connexion()">Connexion</button>
-
-<hr />
-<div *ngIf="cnx">
-  Bonjour {{ nom }} - {{ prenom }}
- 
-</div>
-
-
-<!-- <app-recherche-produit (recherche)="produitListe.filtrerProduits($event)"></app-recherche-produit>
-<div>Nbre de produits : {{ nb$ | async }}</div>
-
-<hr />
-
-<app-produit-liste #produitListe></app-produit-liste>
-
-<hr /> -->
+<footer>
+  <p>© 2024 TheGreatShopOfAllThingsYouMightNeed. All rights reserved.</p>
+</footer>

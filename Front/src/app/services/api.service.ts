@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Client } from '../shared/models/client';
-import { Produit } from '../shared/models/produit';
-import { environment } from '../environments/environments';
+import { Client } from '../../shared/models/client';
+import { Produit } from '../../shared/models/produit';
+import { environment } from '../../environments/environments';
 
 @Injectable()
 export class ApiService {

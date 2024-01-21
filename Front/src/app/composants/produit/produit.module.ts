@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ProduitListeComponent } from './produit-liste/produit-liste.component';
 import { ProduitState } from 'src/shared/states/produit-state';
 import { ProduitStoreComponent } from './produit-store/produit-store.component';
+import { RechercheProduitComponent } from './recherche-produit/recherche-produit.component';
 
 @NgModule({
   imports: [
@@ -12,8 +13,15 @@ import { ProduitStoreComponent } from './produit-store/produit-store.component';
     ReactiveFormsModule,
     NgxsModule.forFeature([ProduitState]),
   ],
-
-  declarations: [ProduitListeComponent, ProduitStoreComponent],
-  exports: [ProduitListeComponent, ProduitStoreComponent],
+  declarations: [
+    ProduitListeComponent, 
+    ProduitStoreComponent,
+    RechercheProduitComponent,
+  ],
+  exports: [
+    ProduitListeComponent, 
+    ProduitStoreComponent,
+    RechercheProduitComponent,
+  ],
 })
 export class ProduitModule {}

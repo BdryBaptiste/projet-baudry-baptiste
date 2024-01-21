@@ -5,7 +5,6 @@ import { Produit } from 'src/shared/models/produit';
 import { ProduitState } from 'src/shared/states/produit-state';
 import { Observable } from 'rxjs';
 import { AddProduit } from 'src/shared/actions/produit-actions';
-import { ProduitStoreComponent } from '../produit-store/produit-store.component';
 
 @Component({
   selector: 'app-produit-liste',

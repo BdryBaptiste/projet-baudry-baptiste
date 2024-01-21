@@ -3,21 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxsModule } from '@ngxs/store';
 import { AppComponent } from './app.component';
-import { ProduitListeComponent } from './composants/produit/produit-liste/produit-liste.component';
-import { RechercheProduitComponent } from './composants/recherche-produit/recherche-produit.component';
 import { ProduitState } from 'src/shared/states/produit-state';
 import { ProduitModule } from './composants/produit/produit.module';
 import { FormsModule } from '@angular/forms';
-import { ApiService } from './api.service';
+import { ApiService } from './services/api.service';
 import { ApiHttpInterceptor } from './http-interceptor';
 import { LoginComponent } from './composants/login/login.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './services/app-routing.module';
+import { HomeComponent } from './composants/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RechercheProduitComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
