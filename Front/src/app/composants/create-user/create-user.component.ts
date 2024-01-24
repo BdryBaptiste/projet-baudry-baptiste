@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { User } from '../../../shared/models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -28,7 +29,7 @@ export class CreateUserComponent implements OnInit {
   emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -80,6 +81,7 @@ export class CreateUserComponent implements OnInit {
       next: (u) => {
         console.log('User created:', u);
         this.errorMessage = '';
+        this.router.navigate(['/catalog']);
       },
       error: (error) => {
         console.error('Error creating user:', error);
