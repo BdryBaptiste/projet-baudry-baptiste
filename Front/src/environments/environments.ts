@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    backendLoginClient: 'http://localhost:3000/api/utilisateur/login',
-    backendCreateUser: 'http://localhost:3000/api/utilisateur/create',
-    backendCatalogue: 'http://localhost:3000/api/catalogue',
+    backendLoginClient: 'https://web-te33.onrender.com/api/utilisateur/login',
+    backendCreateUser: 'https://web-te33.onrender.com/api/utilisateur/create',
+    backendCatalogue: 'https://web-te33.onrender.com/api/catalogue',
   };
