@@ -3,6 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { Produit } from 'src/shared/models/produit';
 import { ProduitState } from 'src/shared/states/produit-state';
 import { DelProduit } from 'src/shared/actions/produit-actions';
+import { Pay } from 'src/shared/actions/produit-actions';
 import { Observable } from 'rxjs';
 
 
@@ -19,5 +20,9 @@ export class ProduitStoreComponent{
 
   delProduit(p: Produit): void {
     this.store.dispatch(new DelProduit(p));
+  }
+
+  pay(): void {
+    this.store.dispatch(new Pay());
   }
 }

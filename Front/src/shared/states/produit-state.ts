@@ -9,6 +9,7 @@ import {
 import { AddProduit, DelProduit } from '../actions/produit-actions';
 import { ProduitStateModel } from './produit-state-models';
 import { Produit } from '../models/produit';
+import { Pay } from 'src/shared/actions/produit-actions';
 
 @State<ProduitStateModel>({
   name: 'produit',
@@ -49,6 +50,15 @@ export class ProduitState {
       produit: state.produit.filter(
         (x) => !(payload.nom == x.nom && payload.id == x.id)
       ),
+    });
+  }
+
+  @Action(Pay)
+  delAllProduits(ctx: StateContext<ProduitStateModel>) {
+    const state = ctx.getState();
+    ctx.setState({
+      ...state,
+      produit: []
     });
   }
 }

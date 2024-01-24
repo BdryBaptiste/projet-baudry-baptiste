@@ -11,3 +11,7 @@ export class DelProduit {
   
     constructor(public payload: Produit) {}
   }
+
+  export class Pay{
+    static readonly type = '[Produit] Pay';
+  }

@@ -63,26 +63,43 @@ exports.create = (req, res) => {
     return;
   }
 
-  const utilisateur = {
-    nom: req.body.nom,
-    prenom: req.body.prenom,
-    adresse: req.body.adresse,
-    codepostal: req.body.codepostal,
-    ville: req.body.ville,
-    email: req.body.email,
-    sexe: req.body.sexe,
-    login: req.body.login,
-    password: req.body.password, 
-    telephone: req.body.telephone
-  };
-
-  Utilisateur.create(utilisateur)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message: err.message || "Some error occurred while creating the user."
+  Utilisateur.findOne({
+    where: {
+      login: req.body.login
+    }
+  }).then(existingUser => {
+    if (existingUser) {
+      res.status(400).send({
+        message: "Login already in use. Please choose a different login."
       });
+      return;
+    }
+
+    const utilisateur = {
+      nom: req.body.nom,
+      prenom: req.body.prenom,
+      adresse: req.body.adresse,
+      codepostal: req.body.codepostal,
+      ville: req.body.ville,
+      email: req.body.email,
+      sexe: req.body.sexe,
+      login: req.body.login,
+      password: req.body.password,
+      telephone: req.body.telephone
+    };
+
+    Utilisateur.create(utilisateur)
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: err.message || "Some error occurred while creating the user."
+        });
+      });
+  }).catch(err => {
+    res.status(500).send({
+      message: "Error checking for existing user with login=" + req.body.login
     });
+  });
 };

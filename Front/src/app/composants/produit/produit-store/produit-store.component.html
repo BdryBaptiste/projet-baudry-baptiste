@@ -1,4 +1,5 @@
-<p>Produits dans le panier</p>
+<p>Basket</p>
 <div *ngFor="let c of liste$ | async">
     {{ c.nom }} <button (click)="delProduit(c)">Sup</button>
   </div>
+  <button (click)="pay()">Pay</button>

@@ -53,7 +53,7 @@ export class CreateUserComponent implements OnInit {
       return;
     }
 
-    if(this.email && !this.emailPattern.test(this.telephone)){
+    if(this.email && !this.emailPattern.test(this.email)){
       this.errorMessage = 'Invalid Email. Check the format.';
       return;
     }
