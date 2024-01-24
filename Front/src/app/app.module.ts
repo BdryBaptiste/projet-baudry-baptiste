@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
 import { ApiHttpInterceptor } from './http-interceptor';
 import { LoginComponent } from './composants/login/login.component';
+import { CreateUserComponent } from './composants/create-user/create-user.component';
 import { AppRoutingModule } from './services/app-routing.module';
 import { HomeComponent } from './composants/home/home.component';
 
@@ -16,6 +17,7 @@ import { HomeComponent } from './composants/home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
+    CreateUserComponent,
     HomeComponent
   ],
   imports: [

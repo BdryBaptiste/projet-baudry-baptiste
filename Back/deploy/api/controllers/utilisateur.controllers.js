@@ -11,7 +11,6 @@ const db = require("../models");
 const Utilisateur = db.utilisateur;
 const Op = db.Sequelize.Op;
 
-// Find a single Utilisateur with an login
 exports.login = (req, res) => {
   const utilisateur = {
     login: req.body.login,
@@ -55,4 +54,37 @@ exports.login = (req, res) => {
       message: "Login ou password incorrect" 
     });
   }
+};
+
+exports.create = (req, res) => {
+  if (!req.body.login || !req.body.password || !req.body.nom) {
+    res.status(400).send({
+      message: "User needs a login, password and name"
+    });
+    return;
+  }
+
+  const utilisateur = {
+    id: uuidv4(),
+    nom: req.body.nom,
+    prenom: req.body.prenom,
+    adresse: req.body.adresse,
+    codepostal: req.body.codepostal,
+    ville: req.body.ville,
+    email: req.body.email,
+    sexe: req.body.sexe,
+    login: req.body.login,
+    password: req.body.password, 
+    telephone: req.body.telephone
+  };
+
+  Utilisateur.create(utilisateur)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || "Some error occurred while creating the Utilisateur."
+      });
+    });
 };

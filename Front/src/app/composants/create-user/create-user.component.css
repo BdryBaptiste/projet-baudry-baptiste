@@ -1,12 +1,11 @@
-.login-container {
-    max-width: 400px;
+.form-container {
+    max-width: 500px;
     margin: auto;
     padding: 2rem;
     background-color: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .form-group {
@@ -14,12 +13,12 @@
 }
 
 label {
-    display: inline-block;
+    display: block;
     margin-bottom: 0.5rem;
 }
 
 input {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     margin-bottom: 0.5rem;
     border: 1px solid #ccc;
@@ -33,6 +32,7 @@ input {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 .btn-primary:hover {
@@ -40,28 +40,12 @@ input {
     border-color: #0062cc;
 }
 
-.welcome-message {
-    margin-top: 1rem;
-    color: #28a745;
-}
-
-.error-message {
-    color: #dc3545;
-    margin-top: 1rem;
-}
-
-.btn-create-user {
-    color: #495057;
-    background-color: #f8f9fa;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+.error-message, .invalid-feedback {
+    color: #dc3545; /* Bootstrap danger color */
+    margin-top: 0.25rem;
     display: block;
-    width: calc(100% - 20px);
 }
 
-.btn-create-user:hover {
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
+.is-invalid {
+    border-color: #dc3545; /* Bootstrap danger color */
 }

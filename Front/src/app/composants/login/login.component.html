@@ -10,9 +10,10 @@
   </div>
   <button class="btn btn-primary" (click)="connexion()">Connexion</button>
   <div *ngIf="cnx" class="welcome-message">
-      Bonjour {{ nom }} - {{ prenom }}
+      Hello {{ nom }} - {{ prenom }}
   </div>
   <div *ngIf="errorMessage" class="error-message">
       {{ errorMessage }}
   </div>
+  <button class="btn-create-user" (click)="goToCreateUser()">Sign in</button>
 </div>

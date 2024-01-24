@@ -39,4 +39,9 @@ export class LoginComponent {
       }
     });
   }
+
+  goToCreateUser() {
+    this.router.navigate(['/create-user']);
+  }
+
 }
