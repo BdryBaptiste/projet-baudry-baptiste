@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require ("uuid");
 const { ACCESS_TOKEN_SECRET }  = require ("../config.js");
 
 const jwt = require('jsonwebtoken');
@@ -65,7 +64,6 @@ exports.create = (req, res) => {
   }
 
   const utilisateur = {
-    id: uuidv4(),
     nom: req.body.nom,
     prenom: req.body.prenom,
     adresse: req.body.adresse,
@@ -84,7 +82,7 @@ exports.create = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: err.message || "Some error occurred while creating the Utilisateur."
+        message: err.message || "Some error occurred while creating the user."
       });
     });
 };

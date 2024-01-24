@@ -23,8 +23,10 @@ export class CreateUserComponent implements OnInit {
   errorMessage: string = '';
 
   postalCodePattern = /^[0-9]{5}$/;
-  sexePattern = /^[MFA]{1}$/;
+  sexePattern = /^[MFO]{1}$/;
   telephonePattern = /^[0-9]{10}$/;
+  emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 
   constructor(private apiService: ApiService) {}
 
@@ -51,6 +53,11 @@ export class CreateUserComponent implements OnInit {
       return;
     }
 
+    if(this.email && !this.emailPattern.test(this.telephone)){
+      this.errorMessage = 'Invalid Email. Check the format.';
+      return;
+    }
+
     const userData = {
       nom: this.nom,
       prenom: this.prenom,
@@ -72,6 +79,7 @@ export class CreateUserComponent implements OnInit {
     this.apiService.createUser(newUser).subscribe({
       next: (u) => {
         console.log('User created:', u);
+        this.errorMessage = '';
       },
       error: (error) => {
         console.error('Error creating user:', error);
